@@ -25,12 +25,12 @@ IRCBalloonJ is released under GNU GPL v3.
 
 Download
 ==========
-
+https://mega.co.nz/#F!GIkXGYwK!X2EQoT-y9K4HrfH4WlQdyA
 
 Source Code
 ==========
 You can get source code of IRCBalloonJ at
-
+https://github.com/fuunkaosekai/IRCBalloonJ
 
 Information of IRCBalloon
 ==========
