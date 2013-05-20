@@ -5,6 +5,8 @@ It intends to fix some bugs of IRCBalloon and provides new features
 
 IRCBalloonJ began from 2013/05/17 (GMT-6)
 
+Thanks for Brian Hsu (Author of IRCBalloon) and Append's help
+
 ChangeLog
 ===========
  - 0.1
@@ -31,6 +33,11 @@ Source Code
 ==========
 You can get source code of IRCBalloonJ at
 https://github.com/fuunkaosekai/IRCBalloonJ
+
+About the Author
+==========
+Fuunkao Sekai
+http://fuunkao-sekai.blogspot.com
 
 Information of IRCBalloon
 ==========

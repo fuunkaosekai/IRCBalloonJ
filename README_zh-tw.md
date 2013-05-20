@@ -5,6 +5,8 @@ IRCBalloonJ 是改自墳墓的作品IRCBalloon 0.7.1
 
 本專案從2013/05/17 (GMT-6)開始
 
+特別感謝墳墓(原作者)和Append的指導與幫忙
+
 改版紀錄
 ===========
  - 0.1
@@ -31,6 +33,11 @@ https://mega.co.nz/#F!GIkXGYwK!X2EQoT-y9K4HrfH4WlQdyA
 ==========
 IRCBalloonJ原始碼存放位置(GitHub):
 https://github.com/fuunkaosekai/IRCBalloonJ
+
+關於作者
+==========
+雖小臉世界
+http://fuunkao-sekai.blogspot.com
 
 IRCBalloon資訊
 ==========
