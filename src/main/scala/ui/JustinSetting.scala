@@ -46,14 +46,15 @@ class JustinSetting(parent: TabFolder, onModify: ModifyEvent => Any) extends
     def isSettingOK = {
         val username = this.username.getText.trim
         val password = this.password.getText.trim
-
-        username.length > 0 && password.length > 0
+        val portText = this.portText.getText.trim
+        username.length > 0 && password.length > 0 && portText.length > 0
     }
 
     def setModifyListener()
     {
         username.addModifyListener(onModify)
         password.addModifyListener(onModify)
+        portText.addModifyListener(onModify)
     }
 
     def setUIEnabled(isEnabled: Boolean)
@@ -67,10 +68,15 @@ class JustinSetting(parent: TabFolder, onModify: ModifyEvent => Any) extends
         portText.setText("443")
     }
     
+    def setTextVerify()
+    {
+        portText.addVerifyListener { e: VerifyEvent => e.doit = e.text.forall(_.isDigit) }
+    }
     
     this.setDefaultValue()
     this.setLayout(gridLayout)
     this.setModifyListener()
+    this.setTextVerify()
     this.tabItem.setText("Justin / Twitch")
     this.tabItem.setControl(this)
 }
