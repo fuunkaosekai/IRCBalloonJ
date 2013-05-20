@@ -9,6 +9,9 @@ Thanks for Brian Hsu (Author of IRCBalloon) and Append's help
 
 ChangeLog
 ===========
+ - 0.1.1
+    - Add a title for pinned chat window
+        - When disabling "Always on top" option, the chatroom should be able to be captured by Window Capture in OBS
  - 0.1
     - Add port and channel option for Twitch/Justin.tv
     - Pinned chat: Fix a bug that every word ends with ":" will be colored as nickname color

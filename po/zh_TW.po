@@ -25,6 +25,10 @@ msgstr "伺服器Port："
 msgid "Chat:"
 msgstr "聊天："
 
+#: D:/IRCBalloon-develop/IRCBalloon/src/main/scala/notification/NotificationBlock.scala
+msgid "IRCBalloon Chatroom"
+msgstr "IRCBalloon 聊天室"
+
 #: D:/IRCBalloon-develop/IRCBalloon/src/main/scala/ui/JustinSetting.scala:18
 msgid "Username:"
 msgstr "使用者名稱："

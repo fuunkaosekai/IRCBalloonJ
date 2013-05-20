@@ -49,6 +49,7 @@ case class NotificationBlock(size: (Int, Int), location: (Int, Int),
     val label = createContentLabel()
     var messages: List[IRCMessage] = Nil
     val (inputLabel, inputText) = createChatInputBox()
+    shell.setText(tr("IRCBalloon Chatroom"))
 
     def createChatInputBox() = 
     {
