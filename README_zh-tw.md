@@ -27,7 +27,7 @@ IRCBalloonJ 採用 GNU GPL v3 做為授權條款
 ==========
 https://mega.co.nz/#F!GIkXGYwK!X2EQoT-y9K4HrfH4WlQdyA
 
-Source Code
+原始碼
 ==========
 IRCBalloonJ原始碼存放位置(GitHub):
 https://github.com/fuunkaosekai/IRCBalloonJ
