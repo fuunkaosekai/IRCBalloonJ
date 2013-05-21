@@ -25,6 +25,8 @@ import java.net.Socket;
 /**
  * A Thread which reads lines from the IRC server. It then
  * passes these lines to the PircBotX without changing them.
+ *                                    ^^^^^^^^^^^^^^^^^^^^^^
+ *                                   modified by Fuunkao Sekai, eliminate any space before the first " "
  * This running Thread also detects disconnection from the server
  * and is thus used by the OutputThread to send lines to the server.
  *
@@ -79,6 +81,17 @@ public class InputThread extends Thread {
 			String line = null;
 			try {
 				line = breader.readLine();
+                //Modified by Fuunkao Sekai
+                int colon_pos = line.indexOf(':');
+                if (line.charAt(0) != ':' && colon_pos > 0){
+                    //if an irc message begins with " ", then trim the leading spaces
+                    line=line.substring(colon_pos);
+                }else if(colon_pos == -1 && line.contains("PONG")){
+                    //trim leading spaces for PONG message
+                    line=line.substring(line.indexOf('P'));
+                }
+                
+                System.out.println("javacap"+line);
 			} catch (InterruptedIOException iioe) {
 				// This will happen if we haven't received anything from the server for a while.
 				// So we shall send it a ping to check that we are still connected.

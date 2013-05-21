@@ -360,7 +360,6 @@ public class PircBotX {
 
 			while ((line = breader.readLine()) != null) {
 				handleLine(line);
-
 				List<String> params = Utils.tokenizeLine(line);
 				if (params.size() >= 2) {
 					String sender = "";
@@ -1658,15 +1657,6 @@ public class PircBotX {
 	protected void handleLine(String line) throws IOException {
 		if (line == null)
 			throw new IllegalArgumentException("Can't process null line");
-		//Modified by Append
-		if (line.charAt(0) != ':'){
-            //if raw message begins with " ", then find the first ":" as the message
-            //if there is no ":" then just pass it (could be just a PONG)
-            int colon_pos = line.indexOf(':');
-            if(colon_pos != -1){
-                line=line.substring(colon_pos);
-            }
-		}
 		log("<<<" + line);
 
 		List<String> parts = Utils.tokenizeLine(line);
