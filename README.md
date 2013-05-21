@@ -5,6 +5,8 @@ It intends to fix some bugs of IRCBalloon and provides new features
 
 IRCBalloonJ began from 2013/05/17 (GMT-6)
 
+began from 2013/05/21 (GMT-6), this project included a modified PircBotX to connect to IRC servers
+
 Thanks for Brian Hsu (Author of IRCBalloon) and Append's help
 
 ChangeLog
@@ -41,6 +43,11 @@ About the Author
 ==========
 Fuunkao Sekai
 http://fuunkao-sekai.blogspot.com
+
+Information of PircBotX
+==========
+PircBotX is a simple, easy to use, Java IRC Framework
+http://code.google.com/p/pircbotx/
 
 Information of IRCBalloon
 ==========

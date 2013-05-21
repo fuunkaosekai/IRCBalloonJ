@@ -5,6 +5,8 @@ IRCBalloonJ 是改自墳墓的作品IRCBalloon 0.7.1
 
 本專案從2013/05/17 (GMT-6)開始
 
+於2013/05/21 (GMT-6)開始，本專案使用了修改過的PircBotX來連線至IRC伺服器
+
 特別感謝墳墓(原作者)和Append的指導與幫忙
 
 改版紀錄
@@ -41,6 +43,11 @@ https://github.com/fuunkaosekai/IRCBalloonJ
 ==========
 雖小臉世界
 http://fuunkao-sekai.blogspot.com
+
+PircBotX資訊
+==========
+PircBotX是一個簡單好用的Java IRC框架
+http://code.google.com/p/pircbotx/
 
 IRCBalloon資訊
 ==========

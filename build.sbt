@@ -12,12 +12,17 @@ scalaVersion := "2.9.1"
 
 fork in run := true
 
+compileOrder := CompileOrder.JavaThenScala
+
+mainClass in assembly := Some("org.bone.ircballoon.MainWindow")
+
+mainClass := Some("org.bone.ircballoon.MainWindow")
+
 resolvers ++= Seq(
     "gettext-commons-site" at "http://gettext-commons.googlecode.com/svn/maven-repository"
 )
 
 libraryDependencies ++= Seq(
-    "org.pircbotx" % "pircbotx" % "1.7",
     "org.xnap.commons" % "gettext-commons" % "0.9.6"
 )
 
