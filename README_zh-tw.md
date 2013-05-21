@@ -46,7 +46,7 @@ http://fuunkao-sekai.blogspot.com
 
 PircBotX資訊
 ==========
-PircBotX是一個簡單好用的Java IRC框架
+PircBotX是一個簡單好用的Java IRC框架，開發者為Lord.Qua...和entityreborn
 http://code.google.com/p/pircbotx/
 
 IRCBalloon資訊

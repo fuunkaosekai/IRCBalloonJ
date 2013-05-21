@@ -46,7 +46,7 @@ http://fuunkao-sekai.blogspot.com
 
 Information of PircBotX
 ==========
-PircBotX is a simple, easy to use, Java IRC Framework
+PircBotX is a simple, easy to use, Java IRC Framework by Lord.Qua... and entityreborn
 http://code.google.com/p/pircbotx/
 
 Information of IRCBalloon
