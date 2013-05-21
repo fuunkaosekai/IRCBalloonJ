@@ -1660,7 +1660,12 @@ public class PircBotX {
 			throw new IllegalArgumentException("Can't process null line");
 		//Modified by Append
 		if (line.charAt(0) != ':'){
-			line=line.substring(1);
+            //if raw message begins with " ", then find the first ":" as the message
+            //if there is no ":" then just pass it (could be just a PONG)
+            int colon_pos = line.indexOf(':');
+            if(colon_pos != -1){
+                line=line.substring(colon_pos);
+            }
 		}
 		log("<<<" + line);
 
