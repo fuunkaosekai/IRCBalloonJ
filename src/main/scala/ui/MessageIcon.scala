@@ -11,9 +11,11 @@ import scala.math._
 import scala.collection.JavaConversions._
 import I18N.i18n._
 
+import jtvirc.UserColorMapper
+
 trait MessageIcon
 {
-    def nicknameStyles(message: String, color: Color, font: Font): List[StyleRange] = 
+    def nicknameStyles(message: String, defColor: Color, font: Font): List[StyleRange] = 
     {
         val regex = """\n(\[OP\] )?(\[(.)*\] )?\w+:""".r
 
@@ -21,7 +23,7 @@ trait MessageIcon
             val style = new StyleRange
             style.start = data.start
             style.length = data.end - data.start
-            style.foreground = color
+            style.foreground = defColor
             style.font = font
             style
         }.toList

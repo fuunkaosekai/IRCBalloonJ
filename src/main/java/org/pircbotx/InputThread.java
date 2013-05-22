@@ -91,7 +91,6 @@ public class InputThread extends Thread {
                     line=line.substring(line.indexOf('P'));
                 }
                 
-                System.out.println("javacap"+line);
 			} catch (InterruptedIOException iioe) {
 				// This will happen if we haven't received anything from the server for a while.
 				// So we shall send it a ping to check that we are still connected.

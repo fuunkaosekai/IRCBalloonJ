@@ -8,6 +8,8 @@ import org.pircbotx.hooks.events._
 import scala.collection.JavaConversions._
 import I18N.i18n._
 
+import jtvirc.UserColorMapper
+
 /**
  *  IRC 機器人
  *
@@ -30,7 +32,7 @@ class IRCBot(hostname: String, port: Int, nickname: String,
              showJoin: Boolean = false,
              showLeave: Boolean = false) extends PircBotX
 {
-
+    var jtvColor = false
     object Callbacks extends ListenerAdapter[IRCBot]
     {
         private def isBrodcaster(user: User): Boolean = 
@@ -38,6 +40,8 @@ class IRCBot(hostname: String, port: Int, nickname: String,
             hostname == ("%s.jtvirc.com" format(user.getNick)) &&
             channel  == ("#%s" format(user.getNick))
         }
+        
+        
 
         private def isOp(user: User): Boolean =
         {
@@ -84,6 +88,19 @@ class IRCBot(hostname: String, port: Int, nickname: String,
                 callback(SystemMessage(tr("[SYS] %s has left") format(event.getUser.getNick)))
             }
         }
+        
+        override def onPrivateMessage(event: PrivateMessageEvent[IRCBot]){
+            if(jtvColor && event.getUser.getNick == "jtv"){
+                if(event.getMessage().contains("USERCOLOR")){
+                    val splmsg = event.getMessage().split(" ")
+                    //splmsg(0)=="USERCOLOR", splmsg(1)==user, splmsg(2)==color
+                    UserColorMapper.ins().setColor(splmsg(1),splmsg(2));
+                    println(UserColorMapper.ins().getColor(splmsg(1)));
+                }
+                
+            }
+        }
+        
 
     }
 
@@ -138,8 +155,15 @@ class IRCBot(hostname: String, port: Int, nickname: String,
                 IRCBot.this.setName(nickname)
                 IRCBot.this.setEncoding("UTF-8")
                 IRCBot.this.connect()
+                if("^(.)+\\.jtvirc\\.com$".r.findAllIn(hostname).length == 1){
+                    jtvColor=true
+                }
+                
                 IRCBot.this.getListenerManager.addListener(Callbacks)
                 IRCBot.this.joinChannel(channel)
+                if(jtvColor){
+                    sendRawLineNow("JTVCLIENT")
+                }
                 IRCBot.this.ping()
             } catch {
                 case e: Exception => onError(e)
