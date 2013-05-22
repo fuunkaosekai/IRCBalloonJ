@@ -97,6 +97,12 @@ class IRCBot(hostname: String, port: Int, nickname: String,
         
     }
 
+    //temporarily disable PircBotX.logException()
+	override def logException(t: Throwable) {
+
+	}
+
+    
     /**
      *  連線至 IRC Server
      */
