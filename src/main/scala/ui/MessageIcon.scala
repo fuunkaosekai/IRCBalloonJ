@@ -29,11 +29,14 @@ trait MessageIcon
             style.start = data.start
             style.length = data.end - data.start
             
-            //will add checking Preference.useTtvColor
-            val userColor = UserColorMapper.ins().getColor(username)
-            
-            if(userColor != null){
-                style.foreground = new Color(Display.getDefault,userColor.getRed(),userColor.getGreen(),userColor.getBlue())
+            if(Preference.useTtvColor()){
+                val userColor = UserColorMapper.ins().getColor(username)
+                
+                if(userColor != null){
+                    style.foreground = new Color(Display.getDefault,userColor.getRed(),userColor.getGreen(),userColor.getBlue())
+                }else{
+                    style.foreground = defColor
+                }
             }else{
                 style.foreground = defColor
             }

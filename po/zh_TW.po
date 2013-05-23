@@ -348,8 +348,8 @@ msgid "Don't display nickname when user has Avatar"
 msgstr "當使用者有大頭貼時就不顯示暱稱"
 
 #: D:/IRCBalloon-develop/IRCBalloon/src/main/scala/ui/AvatarWindow.scala:142
-msgid "Use Justin.TV / Twitch nickname "
-msgstr "使用 Justin.TV / Twitch 上的暱稱"
+msgid "Use Justin.TV / Twitch nickname color"
+msgstr "使用 Justin.TV / Twitch 上的暱稱顏色"
 
 #: D:/IRCBalloon-develop/IRCBalloon/src/main/scala/ui/AvatarWindow.scala:172
 msgid "Nickname"

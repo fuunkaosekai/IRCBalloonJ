@@ -155,9 +155,10 @@ class IRCBot(hostname: String, port: Int, nickname: String,
                 IRCBot.this.setName(nickname)
                 IRCBot.this.setEncoding("UTF-8")
                 IRCBot.this.connect()
-                if("^(.)+\\.jtvirc\\.com$".r.findAllIn(hostname).length == 1){
+                //currently make it always true because user might connect jtv/ttv servers with ip or tmiX.twitch.tv
+                //if("^(.)+\\.jtvirc\\.com$".r.findAllIn(hostname).length == 1){
                     jtvColor=true
-                }
+                //}
                 
                 IRCBot.this.getListenerManager.addListener(Callbacks)
                 IRCBot.this.joinChannel(channel)

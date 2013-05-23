@@ -21,6 +21,7 @@ object Preference extends SWTHelper
     var onlyAvatar: Boolean = false
     var usingTwitchAvatar: Boolean = false
     //var usingTwitchNickname: Boolean = true
+    var usingTwitchColor: Boolean = true
     var usingDefaultEmotes: Boolean = true
 
     val preference = Preferences.userNodeForPackage(Preference.getClass)
@@ -44,6 +45,10 @@ object Preference extends SWTHelper
                 IRCEmotes.addEmote(text, imageFile)
             }
         }
+    }
+    
+    def useTtvColor(): Boolean={
+        usingTwitchColor
     }
 
     def saveEmotes()
@@ -73,6 +78,7 @@ object Preference extends SWTHelper
         this.onlyAvatar = preference.getBoolean("onlyAvatar", false)
         this.usingTwitchAvatar = preference.getBoolean("usingTwitchAvatar", false)
         //this.usingTwitchNickname = preference.getBoolean("usingTwitchNickname", false)
+        this.usingTwitchColor = preference.getBoolean("usingTwitchColor", false)
 
         if (!avatarFile.exists) {
             return
@@ -104,6 +110,7 @@ object Preference extends SWTHelper
         preference.putBoolean("onlyAvatar", this.onlyAvatar)
         preference.putBoolean("usingTwitchAvatar", this.usingTwitchAvatar)
         //preference.putBoolean("usingTwitchNickname", this.usingTwitchNickname)
+        preference.putBoolean("usingTwitchColor", this.usingTwitchColor)
     }
 
 
