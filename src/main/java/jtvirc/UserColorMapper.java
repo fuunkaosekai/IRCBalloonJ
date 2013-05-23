@@ -14,11 +14,19 @@ public class UserColorMapper{
     }
     
     public Color getColor(String user){
-        return map.get(user);
+        return map.get(user.toLowerCase());
     }
     
-    public void setColor(String user, String color){
-        map.put(user,Color.decode(color));
+    public boolean setColor(String user, String color){
+        System.out.println(color);
+        if(color.matches("^#[0-9a-fA-F]{6}$")){
+            map.put(user.toLowerCase(),Color.decode(color));
+            System.out.printf("Saved %s %s",user,map.get(user));
+            return true;
+        }else{
+            //handling jtv color string
+            return true;
+        }
     }
     
 }

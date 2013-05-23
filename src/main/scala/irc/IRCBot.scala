@@ -95,7 +95,7 @@ class IRCBot(hostname: String, port: Int, nickname: String,
                     val splmsg = event.getMessage().split(" ")
                     //splmsg(0)=="USERCOLOR", splmsg(1)==user, splmsg(2)==color
                     UserColorMapper.ins().setColor(splmsg(1),splmsg(2));
-                    println(UserColorMapper.ins().getColor(splmsg(1)));
+                    //println(UserColorMapper.ins().getColor(splmsg(1)));
                 }
                 
             }

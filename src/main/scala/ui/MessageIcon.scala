@@ -20,10 +20,25 @@ trait MessageIcon
         val regex = """\n(\[OP\] )?(\[(.)*\] )?\w+:""".r
 
         regex.findAllIn(message).matchData.map { data => 
+            val sptmsg = data.toString.split(" ")
+            val username = sptmsg(sptmsg.length-1).replace(":","").toLowerCase()    //parse username
+            
             val style = new StyleRange
             style.start = data.start
             style.length = data.end - data.start
-            style.foreground = defColor
+            
+            //will add checking Preference.useTtvColor
+            val userColor = UserColorMapper.ins().getColor(username)
+            
+            if(userColor != null){
+                println("called")
+                style.foreground = new Color(Display.getDefault,userColor.getRed(),userColor.getGreen(),userColor.getBlue())
+            }else{
+                println("called2")
+                style.foreground = defColor
+            }
+            
+            //style.foreground = defColor
             style.font = font
             style
         }.toList
