@@ -6,7 +6,7 @@ seq(assemblySettings: _*)
 
 name := "IRCBalloonJ"
 
-version := "0.2"
+version := "0.2.1"
 
 scalaVersion := "2.9.1"
 
@@ -23,6 +23,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
+    "org.projectlombok" % "lombok" % "0.11.8",
     "org.xnap.commons" % "gettext-commons" % "0.9.6"
 )
 

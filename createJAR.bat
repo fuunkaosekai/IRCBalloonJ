@@ -3,6 +3,7 @@
 del /Q .\bin
 del /Q lib\swt*
 mkdir bin
+mkdir lib
 
 ::  Create JAR for Linux 64bit
 

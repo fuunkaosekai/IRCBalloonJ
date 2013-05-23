@@ -3,6 +3,7 @@ version=$1
 rm -rvf bin/ &&
 rm -rvf lib/swt* &&
 mkdir bin &&
+mkdir lib &&
 
 # Create JAR for Linux 64bit
 cp swt/swt-4.2.2-gtk-linux-x86_64.jar lib/swt.jar &&
