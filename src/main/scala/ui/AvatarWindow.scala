@@ -140,7 +140,7 @@ class AvatarWindow(parent: Shell) extends SWTHelper
     val usingTwitchAvatar = createCheckBox(shell, tr("Using avatar from Justin.TV / Twitch"))
     val onlyAvatar = createCheckBox(shell, tr("Don't display nickname when user has Avatar"))
     //val usingTwitchNickname = createCheckBox(shell, tr("Use Justin.TV / Twitch nickname "))
-    val usingTwitchColor = createCheckBox(shell, tr("Use Justin.TV / Twitch nickname colors"))
+    val usingTwitchColor = createCheckBox(shell, tr("Use Justin.TV / Twitch nickname color"))
 
     val avatarTable = createTable()
     val toolBar = createToolBar()

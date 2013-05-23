@@ -11,6 +11,14 @@ Thanks for Brian Hsu (Author of IRCBalloon) and Append's help
 
 ChangeLog
 ===========
+ - 0.2
+    - Remove "Use Justin.TV / Twitch nickname" option because ithis feature is no longer available on jtv/ttv
+    - Add "Use Justin.TV / Twitch nickname color" option (experimental)
+        - It is located at Preference -> Avatar / Nickname
+        - Sometimes IRC servers (espacially for jtv channels) won't give any information about nickname color,
+          in that case the "Nickname Color" setting on main window will be applied
+    - Fix a bug that the nickname in first line is not colored
+    - Remove unexpected messages on log on main window
  - 0.1.1
     - Add a title for pinned chat window
         - When disabling "Always on top" option, the chatroom should be able to be captured by Window Capture in OBS
