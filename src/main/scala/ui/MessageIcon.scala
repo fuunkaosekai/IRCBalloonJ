@@ -21,7 +21,9 @@ trait MessageIcon
 
         regex.findAllIn(message).matchData.map { data => 
             val sptmsg = data.toString.split(" ")
-            val username = sptmsg(sptmsg.length-1).replace(":","").toLowerCase()    //parse username
+            val username = sptmsg(sptmsg.length-1).replace("\n","").replace(":","").toLowerCase()    //parse username
+            
+            //println("username: "+username)
             
             val style = new StyleRange
             style.start = data.start
@@ -31,10 +33,8 @@ trait MessageIcon
             val userColor = UserColorMapper.ins().getColor(username)
             
             if(userColor != null){
-                println("called")
                 style.foreground = new Color(Display.getDefault,userColor.getRed(),userColor.getGreen(),userColor.getBlue())
             }else{
-                println("called2")
                 style.foreground = defColor
             }
             
