@@ -45,17 +45,17 @@ object IRCUser
 
 class IRCUser(val username: String)
 {
-    lazy val twitchNickname = getTwitchNickname(username)
+    //lazy val twitchNickname = getTwitchNickname(username)
     lazy val twitchAvatar = getTwitchAvatar(username)
 
-    private def getTwitchNickname(nickname: String): Option[String] = allCatch.opt 
+    /*private def getTwitchNickname(nickname: String): Option[String] = allCatch.opt 
     {
         val profileURL = "http://api.justin.tv/api/user/show/" + nickname + ".xml"
         val twitchUserXML = XML.loadString(Source.fromURL(profileURL).mkString)
         val twitchNickname = (twitchUserXML \\ "name").map(_.text).filterNot(_.isEmpty)
 
         twitchNickname(0)
-    }
+    }*/
 
     private def getTwitchAvatar(nickname: String): Option[Image] = allCatch.opt 
     {
@@ -69,10 +69,11 @@ class IRCUser(val username: String)
         loadFromURL(imageURL).map(image => resize(image, (36, 36))).get
     }
 
-    def nickname = Preference.usingTwitchNickname match {
+    def nickname = username
+    /*def nickname = Preference.usingTwitchNickname match {
         case true  => twitchNickname.getOrElse(username)
         case false => username
-    }
+    }*/
 
     def avatar: Option[Image] = {
 
