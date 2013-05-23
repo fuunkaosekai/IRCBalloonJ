@@ -17,6 +17,7 @@ ChangeLog
         - It is located at Preference -> Avatar / Nickname
         - Sometimes IRC servers (espacially for jtv channels) won't give any information about nickname color,
           in that case the "Nickname Color" setting on main window will be applied
+        - Currently only ttv channel is supported
     - Fix a bug that the nickname in first line is not colored
     - Remove unexpected messages on log on main window
  - 0.1.1
