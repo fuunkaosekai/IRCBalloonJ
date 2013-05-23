@@ -11,6 +11,8 @@ Thanks for Brian Hsu (Author of IRCBalloon) and Append's help
 
 ChangeLog
 ===========
+ - 0.2.1
+    - Support Jtv chatroom nickname color (experimental)
  - 0.2
     - Remove "Use Justin.TV / Twitch nickname" option because ithis feature is no longer available on jtv/ttv
     - Add "Use Justin.TV / Twitch nickname color" option (experimental)

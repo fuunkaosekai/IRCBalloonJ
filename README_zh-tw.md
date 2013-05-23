@@ -11,6 +11,8 @@ IRCBalloonJ 是改自墳墓的作品IRCBalloon 0.7.1
 
 改版紀錄
 ===========
+ - 0.2.1
+    - 支援Jtv聊天室暱稱顏色 (測試中)
  - 0.2
     - 刪除"使用 Justin.TV / Twitch 上的暱稱" 因此選項已被Jtv/Ttv移除
     - 增加"使用 Justin.TV / Twitch 上的暱稱顏色" 選項 (測試中)
