@@ -18,10 +18,10 @@ public class UserColorMapper{
     }
     
     public boolean setColor(String user, String color){
-        System.out.println(color);
+        //System.out.println(color);
         if(color.matches("^#[0-9a-fA-F]{6}$")){
             map.put(user.toLowerCase(),Color.decode(color));
-            System.out.printf("Saved %s %s",user,map.get(user));
+            //System.out.printf("Saved %s %s",user,map.get(user));
             return true;
         }else{
             //handling jtv color string

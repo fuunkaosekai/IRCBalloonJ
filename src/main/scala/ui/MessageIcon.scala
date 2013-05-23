@@ -17,7 +17,7 @@ trait MessageIcon
 {
     def nicknameStyles(message: String, defColor: Color, font: Font): List[StyleRange] = 
     {
-        val regex = """\n(\[OP\] )?(\[(.)*\] )?\w+:""".r
+        val regex = """(^|\n)(\[OP\] )?(\[(.)*\] )?\w+:""".r
 
         regex.findAllIn(message).matchData.map { data => 
             val sptmsg = data.toString.split(" ")
