@@ -11,6 +11,9 @@ Thanks for Brian Hsu (Author of IRCBalloon) and Append's help
 
 ChangeLog
 ===========
+ - 0.2.2
+    - Emotes, nickname/avatar now support UTF-8
+        - This change makes old versions of IRCBalloon and IRCBalloonJ unable to read preferences
  - 0.2.1
     - Support Jtv chatroom nickname color (experimental)
  - 0.2
